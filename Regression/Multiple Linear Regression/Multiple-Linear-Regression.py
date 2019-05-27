@@ -24,6 +24,18 @@ X = ohe.fit_transform(X).toarray()
 X = X[:, 1:]
 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.33, random_state = 42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 # Fitting multiple linear regression to the training set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+# Predicting the test set result
+y_pred = regressor.predict(X_test)
+
+# Building the optimal model using Backword elimination
+import statsmodels.formula.api as sm
+X = np.append(arr = np.ones((50,1)), values = X, axis = 1)
+
+
