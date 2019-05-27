@@ -24,3 +24,12 @@ poly_reg = PolynomialFeatures(degree=2)
 X_poly = poly_reg.fit_transform(X)
 lin_reg2 = LinearRegression()
 lin_reg2.fit(X_poly, y)
+
+plt.scatter(X, y, color = "red")
+plt.plot(X, lin_reg.predict(X))
+plt.title("Truth or Bluff (Polynomial regression)")
+plt.xlabel("Year")
+plt.ylabel("Salary")
+plt.show()
+
+
