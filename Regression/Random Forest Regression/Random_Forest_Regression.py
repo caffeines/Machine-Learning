@@ -18,7 +18,7 @@ from sklearn.ensemble import RandomForestRegressor
 regressor = RandomForestRegressor(n_estimators=300, random_state=0)
 regressor.fit(X, y)
 
-y_pred = regressor.predict([[6.1]])
+y_pred = regressor.predict([[6.5]])
 
 # Visualising the Random Forest Tree Regression results (higher resolution)
 X_grid = np.arange(min(X), max(X), 0.01)
