@@ -5,6 +5,7 @@ Created on Thu May 23 03:48:32 2019
 
 @author: caffeines
 """
+#%reset -f
 
 # data-preprocessing
 
